@@ -34,36 +34,48 @@ public class Dish {
     // No-arg constructor
         public Dish() {}
 
+    // Getter for dishId
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    // Setter for dishId
+    public Dish setId(String id) {
         this.id = id;
+        return this;
     }
 
+    // Getter for name
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    // Setter for name
+    public Dish setName(String name) {
         this.name = name;
+        return this;
     }
 
+    // Getter for description
     public String getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    // Setter for description
+    public Dish setDescription(String description) {
         this.description = description;
+        return this;
     }
 
+    // Getter for price
     public double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    // Setter for price
+    public Dish setPrice(double price) {
         this.price = price;
+        return this;
     }
 
     @Override

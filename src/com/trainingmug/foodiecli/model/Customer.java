@@ -33,44 +33,48 @@ public class Customer {
 
     private List<Order> orderHistory;
 
-    public String getId() {
+    // Getter for customerId
+    public String getCustomerId() {
         return id;
     }
 
-    public void setId(String id) {
+    // Setter for customerId
+    public Customer setId(String id) {
         this.id = id;
+        return this;
     }
 
+    // Getter for name
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    // Setter for name
+    public Customer setName(String name) {
         this.name = name;
+        return this;
     }
 
+    // Getter for email
     public String getEmail() {
         return email;
     }
 
-    public void setEmail(String email) {
+    // Setter for email
+    public Customer setEmail(String email) {
         this.email = email;
+        return this;
     }
 
+    // Getter for password
     public String getPassword() {
         return password;
     }
 
-    public void setPassword(String password) {
+    // Setter for password
+    public Customer setPassword(String password) {
         this.password = password;
-    }
-
-    public List<Order> getOrderHistory() {
-        return orderHistory;
-    }
-
-    public void setOrderHistory(List<Order> orderHistory) {
-        this.orderHistory = orderHistory;
+        return this;
     }
 
     @Override

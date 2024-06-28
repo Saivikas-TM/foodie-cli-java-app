@@ -28,45 +28,56 @@ public class Restaurant {
     private String id;
     private String name;
     private String address;
-    private List<Dish> menu;
+    private List<String> menu;
 
     //no-agr constructor
     public Restaurant(){
 
     }
 
+    // Getter for restaurantId
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    // Setter for restaurantId
+    public Restaurant setId(String id) {
         this.id = id;
+        return this;
     }
 
+    // Getter for name
     public String getName() {
         return name;
     }
 
-    public void setName(String name) {
+    // Setter for name
+    public Restaurant setName(String name) {
         this.name = name;
+        return this;
     }
 
+    // Getter for address
     public String getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    // Setter for address
+    public Restaurant setAddress(String address) {
         this.address = address;
+        return this;
     }
 
-    public List<Dish> getMenu() {
+    // Getter for menu
+    public List<String> getMenu() {
         return menu;
     }
 
-    public void setMenu(List<Dish> menu) {
+    // Setter for menu
+    public Restaurant setMenu(List<String> menu) {
         this.menu = menu;
+        return this;
     }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

@@ -38,52 +38,70 @@ private String id;
 
     private Date orderDate;
 
+    // Getter for orderId
     public String getId() {
         return id;
     }
 
-    public void setId(String id) {
+    // Setter for orderId
+    public Order setId(String id) {
         this.id = id;
+        return this;
     }
 
+    // Getter for customer
     public Customer getCustomer() {
         return customer;
     }
 
-    public void setCustomer(Customer customer) {
+    // Setter for customer
+    public Order setCustomer(Customer customer) {
         this.customer = customer;
+        return this;
     }
 
+    // Getter for restaurant
     public Restaurant getRestaurant() {
         return restaurant;
     }
 
-    public void setRestaurant(Restaurant restaurant) {
+    // Setter for restaurant
+    public Order setRestaurant(Restaurant restaurant) {
         this.restaurant = restaurant;
+        return this;
     }
 
+    // Getter for dishes
     public List<Dish> getDishes() {
         return dishes;
     }
 
-    public void setDishes(List<Dish> dishes) {
+    // Setter for dishes
+    public Order setDishes(List<Dish> dishes) {
         this.dishes = dishes;
+        return this;
     }
 
+    // Getter for totalPrice
     public double getTotalPrice() {
         return totalPrice;
     }
 
-    public void setTotalPrice(double totalPrice) {
+    // Setter for totalPrice
+    public Order setTotalPrice(double totalPrice) {
         this.totalPrice = totalPrice;
+        return this;
     }
 
+    // Getter for orderDate
     public Date getOrderDate() {
         return orderDate;
     }
 
-    public void setOrderDate(Date orderDate) {
+    // Setter for orderDate
+    public Order setOrderDate(Date orderDate) {
         this.orderDate = orderDate;
+        return this;
     }
 
     @Override
