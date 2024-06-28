@@ -1,0 +1,93 @@
+package com.trainingmug.foodiecli.model;
+
+import java.util.List;
+import java.util.Objects;
+
+public class Restaurant {
+
+ /*
+ Restaurant
+    add the following properties
+    --------------------------------------
+    Datatype                  variable
+    --------------------------------------
+    String                      id
+    String                      name
+    String                      address
+    List<Dish>                  menu
+     /
+
+    /
+
+All the fields should be private
+Create only no-arg constructor
+Create Getters and Setter methods
+Override hashCode() and equals() methods
+Override toString() methods
+*/
+
+    private String id;
+    private String name;
+    private String address;
+    private List<Dish> menu;
+
+    //no-agr constructor
+    public Restaurant(){
+
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public List<Dish> getMenu() {
+        return menu;
+    }
+
+    public void setMenu(List<Dish> menu) {
+        this.menu = menu;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Restaurant restarunt = (Restaurant) o;
+        return Objects.equals(id, restarunt.id) && Objects.equals(name, restarunt.name) && Objects.equals(address, restarunt.address) && Objects.equals(menu, restarunt.menu);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, address, menu);
+    }
+
+    @Override
+    public String toString() {
+        return "Restarunt{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", address='" + address + '\'' +
+                ", menu=" + menu +
+                '}';
+    }
+}
