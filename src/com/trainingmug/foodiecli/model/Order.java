@@ -1,5 +1,7 @@
 package com.trainingmug.foodiecli.model;
 
+import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 
 public class Order {
@@ -22,16 +24,17 @@ public class Order {
 4.Override hashCode() and equals() methods
 5.Override toString() methods
 */
+private String id;
 
-    private String id;
-    private String name;
-    private String description;
-    private double price;
+    private Customer customer;
 
-    // No-arg constructor
-    public Order() {
+    private Restaurant restaurant;
 
-    }
+    private List<Dish> dishes;
+
+    private double totalPrice;
+
+    private Date orderDate;
 
     public String getId() {
         return id;
@@ -41,28 +44,44 @@ public class Order {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
-    public String getDescription() {
-        return description;
+    public Restaurant getRestaurant() {
+        return restaurant;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setRestaurant(Restaurant restaurant) {
+        this.restaurant = restaurant;
     }
 
-    public double getPrice() {
-        return price;
+    public List<Dish> getDishes() {
+        return dishes;
     }
 
-    public void setPrice(double price) {
-        this.price = price;
+    public void setDishes(List<Dish> dishes) {
+        this.dishes = dishes;
+    }
+
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public Date getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(Date orderDate) {
+        this.orderDate = orderDate;
     }
 
     @Override
@@ -70,22 +89,23 @@ public class Order {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Order order = (Order) o;
-        return Double.compare(order.price, price) == 0 && Objects.equals(id, order.id) && Objects.equals(name, order.name) && Objects.equals(description, order.description);
+        return Double.compare(order.totalPrice, totalPrice) == 0 && Objects.equals(id, order.id) && Objects.equals(customer, order.customer) && Objects.equals(restaurant, order.restaurant) && Objects.equals(dishes, order.dishes) && Objects.equals(orderDate, order.orderDate);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, description, price);
+        return Objects.hash(id, customer, restaurant, dishes, totalPrice, orderDate);
     }
 
-    // Override toString() method
     @Override
     public String toString() {
-        return "Dish{" +
+        return "Order{" +
                 "id='" + id + '\'' +
-                ", name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", price=" + price +
+                ", customer=" + customer +
+                ", restaurant=" + restaurant +
+                ", dishes=" + dishes +
+                ", totalPrice=" + totalPrice +
+                ", orderDate=" + orderDate +
                 '}';
     }
 }

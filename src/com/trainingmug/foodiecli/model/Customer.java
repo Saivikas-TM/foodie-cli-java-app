@@ -1,5 +1,6 @@
 package com.trainingmug.foodiecli.model;
 
+import java.util.List;
 import java.util.Objects;
 
 public class Customer {
@@ -22,59 +23,67 @@ Create Getters and Setter methods
 Override hashCode() and equals() methods
 Override toString() methods
 */
-        private String id;
-        private String name;
-        private String email;
-        private String password;
+  private String id;
 
-        // No-arg constructor
-        public Customer() {}
+    private String name;
 
-        // Getters
-        public String getId() {
-            return id;
-        }
+    private String email;
 
-        public String getName() {
-            return name;
-        }
+    private String password;
 
-        public String getEmail() {
-            return email;
-        }
+    private List<Order> orderHistory;
 
-        public String getPassword() {
-            return password;
-        }
+    public String getId() {
+        return id;
+    }
 
-        // Setters
-        public void setId(String id) {
-            this.id = id;
-        }
+    public void setId(String id) {
+        this.id = id;
+    }
 
-        public void setName(String name) {
-            this.name = name;
-        }
+    public String getName() {
+        return name;
+    }
 
-        public void setEmail(String email) {
-            this.email = email;
-        }
+    public void setName(String name) {
+        this.name = name;
+    }
 
-        public void setPassword(String password) {
-            this.password = password;
-        }
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public List<Order> getOrderHistory() {
+        return orderHistory;
+    }
+
+    public void setOrderHistory(List<Order> orderHistory) {
+        this.orderHistory = orderHistory;
+    }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return Objects.equals(id, customer.id) && Objects.equals(name, customer.name) && Objects.equals(email, customer.email) && Objects.equals(password, customer.password);
+        return Objects.equals(id, customer.id) && Objects.equals(name, customer.name) && Objects.equals(email, customer.email) && Objects.equals(password, customer.password) && Objects.equals(orderHistory, customer.orderHistory);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, email, password);
+        return Objects.hash(id, name, email, password, orderHistory);
     }
 
     @Override
@@ -84,6 +93,7 @@ Override toString() methods
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
+                ", orderHistory=" + orderHistory +
                 '}';
     }
 }
