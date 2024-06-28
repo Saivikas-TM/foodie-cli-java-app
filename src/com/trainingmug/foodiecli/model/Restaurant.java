@@ -6,7 +6,6 @@ import java.util.Objects;
 public class Restaurant {
 
  /*
- Restaurant
     add the following properties
     --------------------------------------
     Datatype                  variable
@@ -19,11 +18,11 @@ public class Restaurant {
 
     /
 
-All the fields should be private
-Create only no-arg constructor
-Create Getters and Setter methods
-Override hashCode() and equals() methods
-Override toString() methods
+1.All the fields should be private
+2.Create only no-arg constructor
+3.Create Getters and Setter methods
+4.Override hashCode() and equals() methods
+5.Override toString() methods
 */
 
     private String id;
