@@ -38,10 +38,10 @@ public class CsvReader {
     }
 
     public List<Customer> readCustomersFromCsv() {
-        String CUSTOMERS_CSV_PATH = "C:\\Users\\vishw\\Intellij-Projects\\foodie-cli-application\\data\\customers.csv";
+        String customerCsvPath = "C:\\Users\\vishw\\Intellij-Projects\\foodie-cli-application\\data\\customers.csv";
         String line;
         List<Customer> customersList = new ArrayList<>();
-        try (BufferedReader br = new BufferedReader(new FileReader(CUSTOMERS_CSV_PATH))) {
+        try (BufferedReader br = new BufferedReader(new FileReader(customerCsvPath))) {
             String cvsSplitBy = ",";
             br.readLine();
             while ((line = br.readLine()) != null) {
@@ -55,7 +55,7 @@ public class CsvReader {
             }
         } catch (IOException e) {
             e.printStackTrace();
-            System.out.println("Issues in reading csv file from the path :" + CUSTOMERS_CSV_PATH);
+            System.out.println("Issues in reading csv file from the path :" + customerCsvPath);
             System.exit(0);
         }
         return customersList;

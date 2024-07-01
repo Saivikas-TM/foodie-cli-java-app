@@ -36,7 +36,7 @@ public class Restaurant {
     }
 
     // Getter for restaurantId
-    public String getId() {
+    public  String getId() {
         return id;
     }
 
